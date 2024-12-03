@@ -1,0 +1,9 @@
+{
+  "project_name": "Keycloak experiment",
+  "project_slug": "keycloak_experiment",
+  "_models": {},
+  "database": "sqlite",
+  "django_rest_framework": true,
+  "cron_jobs": false,
+  "authentication": "session"
+}

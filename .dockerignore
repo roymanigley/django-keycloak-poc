@@ -1,0 +1,10 @@
+db.sqlite3
+docker-compose.yml
+Dockerfile
+.git
+/media
+/static
+.venv
+LC_MESSAGES/*.mo
+/nginx
+/.idea

@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/portal.css' %}">
+{% endblock %}
+{% block content %}
+    <br>
+    <div>
+        <center>
+            <h3>{% translate 'unexpected error' %}</h3>
+        </center>
+    </div>
+{% endblock %}

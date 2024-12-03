@@ -1,0 +1,150 @@
+:root {
+    --app-primary: #009688;
+}
+
+.datepicker-date-display {
+    background-color: var(--app-primary);
+}
+
+.datepicker-cancel,
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done {
+    color: var(--app-primary);
+}
+
+.datepicker-table td.is-today {
+    color: var(--app-primary);
+}
+
+.btn,
+.btn-large,
+.btn-small,
+.btn-floating {
+    background-color: var(--app-primary);
+}
+
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus,
+.btn-floating:focus {
+    background-color: var(--app-primary);
+}
+
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover,
+.btn-floating:hover {
+    background-color: var(--app-primary);
+}
+
+.datepicker-table td.is-selected {
+    background-color: var(--app-primary);
+}
+
+.select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid var(--app-primary);
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid var(--app-primary);
+    -webkit-box-shadow: 0 1px 0 0 var(--app-primary);
+    box-shadow: 0 1px 0 0 var(--app-primary);
+}
+
+input:not([type]):focus:not([readonly])+label,
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+input[type=url]:not(.browser-default):focus:not([readonly])+label,
+input[type=time]:not(.browser-default):focus:not([readonly])+label,
+input[type=date]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label,
+input[type=tel]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label,
+input[type=search]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: var(--app-primary);
+}
+
+.pagination li.active {
+    background-color: var(--app-primary);
+}
+
+nav {
+    background-color: var(--app-primary);
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: var(--app-primary);
+}
+
+.errorlist {
+    color: red;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.form-action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+select {
+    display: block !important;
+    top: -1.2em;
+    position: relative;
+    opacity: 0;
+    height: 0;
+}
+
+.progress .indeterminate {
+    background-color: var(--app-primary);
+}
+
+.progress {
+    margin: 0;
+    background-color: transparent;
+    opacity: 0;
+}
+
+.block-ui {
+    position: absolute;
+    background: black;
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    display: none;
+}
+
+.error-toast {
+    background-color: var(--app-primary) !important;
+    color: white !important;
+}
+
+.warn-toast {
+    background-color: var(--app-primary) !important;
+    color: white !important;
+}
+
+.success-toast {
+    background-color: var(--app-primary) !important;
+    color: white !important;
+}

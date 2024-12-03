@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-12 11:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: conf/settings.py:140
+msgid "English"
+msgstr "English"
+
+#: conf/settings.py:141
+msgid "German"
+msgstr "Deutsch"
+
+#: conf/settings.py:142
+msgid "French"
+msgstr "Französisch"
+
+#: core/custom_business_logic/clients/exceptions.py:14
+msgid "API unexpected redirect"
+msgstr "Unerwarteter Fehler"
+
+#: core/custom_business_logic/clients/exceptions.py:19
+msgid "API not authenticated"
+msgstr "Authentifizierung fehlgeschlagen"
+
+#: core/custom_business_logic/clients/exceptions.py:24
+msgid "API not found"
+msgstr "Seite nicht gefunden"
+
+#: core/custom_business_logic/clients/exceptions.py:29
+msgid "API permission denied"
+msgstr "Zugriff verweigert"
+
+#: core/custom_business_logic/clients/exceptions.py:34
+msgid "API invalid data"
+msgstr "Inkorekte daten wurden übermittelt"
+
+#: core/custom_business_logic/clients/exceptions.py:39
+msgid "API unavailable"
+msgstr "Die API ist aktuell nicht verfügbar"
+
+#: core/custom_business_logic/clients/exceptions.py:44
+msgid "API unexpected error"
+msgstr "Unerwarteter Fehler"
+
+#: core/custom_business_logic/models/accounting_group_factor.py:76
+msgid ""
+"accounting group was removed in lightspeed, therefore no modification is "
+"possible"
+msgstr "Die Warengruppe wurde in Lightspeed gelöscht, daher sind keine Anpassungen möglich"
+
+#: core/custom_business_logic/models/accounting_group_factor.py:78
+msgid "valid to date is before valid from"
+msgstr "Das Gültig bis ist vor dem Gültig von"
+
+#: core/custom_business_logic/models/accounting_group_factor.py:80
+msgid "collision in the date"
+msgstr "Kollision der Dati"
+
+#: core/custom_business_logic/templates/delete.html:13
+msgid "confirm delete"
+msgstr "Soll der Eintrag wirklich gelöscht werden?"
+
+#: core/custom_business_logic/templates/list.html:15
+msgid "search"
+msgstr "Suchen"
+
+#: core/custom_business_logic/views/pinit_sync.py:17
+msgid "synced successfully"
+msgstr "Daten wurden erfolgreich synchronisiert"
+
+#: core/custom_business_logic/views/pinit_sync.py:21
+msgid "synchronisation failed"
+msgstr "Die Synchronisierung ist fehlgeschlagen"
+
+#: core/portal/views.py:18 core/shared/templates/404.html:12
+msgid "page not found"
+msgstr "Seite nicht gefunden"
+
+#: core/shared/templates/403.html:12
+msgid "permission denied"
+msgstr "Zugriff verweigert"
+
+#: core/shared/templates/500.html:12
+msgid "unexpected error"
+msgstr "Unerwarteter Fehler"
+
+#: core/shared/templates/_base.html:38
+msgid "Home"
+msgstr "Home"
+
+#: core/shared/templates/_base.html:46
+msgid "Admin Panel"
+msgstr "Admin Panel"
+
+#: core/shared/templates/_base.html:54
+msgid "Logout"
+msgstr "Logout"
+
+#: core/shared/templates/_base.html:61
+msgid "Login"
+msgstr "Login"
+
+msgid "factor"
+msgstr "Faktor"
+
+msgid "accounting_group.display"
+msgstr "Warengruppe"
+
+msgid "valid_from"
+msgstr "Gültig von"
+
+msgid "valid_to"
+msgstr "Gültig bis"
+
+msgid "Accounting Group Factor"
+msgstr "Warengruppe Faktoren"

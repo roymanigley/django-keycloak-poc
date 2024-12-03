@@ -1,0 +1,9 @@
+.venv/
+/static
+/media
+db.sqlite3
+*.mo
+__pycache__
+/nginx/keys
+/.idea
+/.coverage

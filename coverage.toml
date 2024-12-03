@@ -1,0 +1,59 @@
+[tool.coverage.run]
+source = ["config", "apps"]
+data_file = ".coverage/coverage.data"
+# Omit certain directories and files
+omit = [
+    "*/tests/*",
+    "*/tests.py",
+    "*/migrations/*",
+    "*/__init__.py",
+    "*/manage.py",
+    "*/venv/*",
+    "*/.venv/*",
+    "*/urls.py",
+    "*/apps.py",
+    "*/admin.py",
+    "*/models/*",
+    "./integration_tests_entry_point.py",
+    "./conf/*"
+]
+
+# Enable branch coverage
+branch = true
+
+[tool.coverage.report]
+# Show missing lines in the report
+show_missing = true
+skip_covered = false
+
+# Precision for percentages
+precision = 2
+
+# Sort the report by module name
+sort = "Name"
+
+# Exclude certain lines from the coverage report
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if __name__ == '__main__'",
+    "raise NotImplementedError",
+]
+
+[tool.coverage.html]
+# Directory where HTML reports will be generated
+directory = "coverage_html_report"
+
+# Show source code in the report with missing lines highlighted
+show_contexts = true
+
+[tool.coverage.xml]
+# Set the XML output file for CI tools
+output = "coverage.xml"
+
+[tool.coverage.paths]
+# Remap paths for consistent coverage reports across different environments
+source = [
+    "config",
+    "apps"
+]
