@@ -49,17 +49,17 @@
                 {% endif %}
                 {% if user.is_authenticated %}
                     <li>
-                        <a href="/auth/logout/" onclick="showProgress()">
-                            <i class="material-icons left">logout</i>
-                            {% translate 'Logout' %}
-                        </a>
+                        <form method="POST" action="/auth/logout/">
+                                {% csrf_token %}
+                                <button class="btn" type="submit">Logout</button>
+                        </form>
                     </li>
                 {% else %}
                     <li>
-                        <a href="/auth/login/" onclick="showProgress()">
-                            <i class="material-icons left">login</i>
-                            {% translate 'Login' %}
-                        </a>
+                        <form method="POST" action="/auth/oidc/openid_connect/login/?process=login">
+                                {% csrf_token %}
+                                <button class="btn" type="submit">Login</button>
+                        </form>
                     </li>
                 {% endif %}
             </ul>

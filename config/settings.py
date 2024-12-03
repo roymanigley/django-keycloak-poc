@@ -40,14 +40,43 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'rest_framework',
-    
+
     'apps.shared',
     'apps.core',
+
+
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.openid_connect'
 ]
 
+AUTHENTICATION_BACKENDS = (
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
 
+SITE_ID = 1
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+SOCIALACCOUNT_ONLY = True
+SOCIALACCOUNT_ADAPTER = 'config.keycloak_adapter.KeycloakRoleAdapter'
+SOCIALACCOUNT_PROVIDERS = {
+    "openid_connect": {
+        "APPS": [
+            {
+                "provider_id": "openid_connect",
+                "name": "openid_connect",
+                "client_id": "web-app",
+                "secret": "ki50FkYKHQRJV4yplwww0M15Pk912Qdz",
+                "settings": {
+                    "server_url": "http://localhost:8080/auth/realms/master/.well-known/openid-configuration",
+                },
+            }
+        ]
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,6 +88,7 @@ MIDDLEWARE = [
     'config.middlewares.ThreadLocalMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 if DEBUG and 'test' not in sys.argv:
@@ -182,7 +212,7 @@ LOGGING = {
     },
 }
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/auth/login/'
+LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/auth/login/'
 
 DEFAULT_PAGE_SIZE = 25
