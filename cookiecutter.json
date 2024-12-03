@@ -1,7 +1,18 @@
 {
   "project_name": "Keycloak experiment",
   "project_slug": "keycloak_experiment",
-  "_models": {},
+  "_models": {
+    "Dummy": {
+      "fields": {
+        "name": {
+          "type": "TextField",
+          "attributes": {
+            "required": true
+          }
+        }
+      }
+    }
+  },
   "database": "sqlite",
   "django_rest_framework": true,
   "cron_jobs": false,
