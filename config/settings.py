@@ -58,20 +58,29 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
+APP_ROLE = 'specific-role'
 SITE_ID = 1
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 SOCIALACCOUNT_ONLY = True
 SOCIALACCOUNT_ADAPTER = 'config.keycloak_adapter.KeycloakRoleAdapter'
+KC_REALM = os.environ.get('KC_REALM', 'master')
+KC_BASE_URL = os.environ.get('KC_BASE_URL', 'http://localhost:8080')
+KC_CLIENT_ID = os.environ.get('KC_CLIENT_ID', 'web-app')
+KC_CLIENT_SECRET = os.environ.get(
+    'KC_CLIENT_ID', 'ki50FkYKHQRJV4yplwww0M15Pk912Qdz'
+)
+KC_REALM_URL = f'{KC_BASE_URL}/auth/realms/{KC_REALM}'
+KC_ISSUER = os.environ.get('KC_ISSUER', KC_REALM_URL)
 SOCIALACCOUNT_PROVIDERS = {
     "openid_connect": {
         "APPS": [
             {
                 "provider_id": "openid_connect",
                 "name": "openid_connect",
-                "client_id": "web-app",
-                "secret": "ki50FkYKHQRJV4yplwww0M15Pk912Qdz",
+                "client_id": KC_CLIENT_ID,
+                "secret": KC_CLIENT_SECRET,
                 "settings": {
-                    "server_url": "http://localhost:8080/auth/realms/master/.well-known/openid-configuration",
+                    "server_url": f"{KC_REALM_URL}/.well-known/openid-configuration",
                 },
             }
         ]
@@ -230,5 +239,9 @@ JAZZMIN_SETTINGS = {
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': DEFAULT_PAGE_SIZE
+    'PAGE_SIZE': DEFAULT_PAGE_SIZE,
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'config.keycloak_authentication.KeycloakAuthentication',
+    ],
 }
