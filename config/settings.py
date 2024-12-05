@@ -69,7 +69,7 @@ KC_CLIENT_ID = os.environ.get('KC_CLIENT_ID', 'web-app')
 KC_CLIENT_SECRET = os.environ.get(
     'KC_CLIENT_ID', 'ki50FkYKHQRJV4yplwww0M15Pk912Qdz'
 )
-KC_REALM_URL = f'{KC_BASE_URL}/auth/realms/{KC_REALM}'
+KC_REALM_URL = f'{KC_BASE_URL}/realms/{KC_REALM}'
 KC_ISSUER = os.environ.get('KC_ISSUER', KC_REALM_URL)
 SOCIALACCOUNT_PROVIDERS = {
     "openid_connect": {

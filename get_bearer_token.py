@@ -1,7 +1,7 @@
 import requests
 
 # Keycloak credentials
-token_url = "http://localhost:8080/auth/realms/master/protocol/openid-connect/token"
+token_url = "http://localhost:8080/realms/master/protocol/openid-connect/token"
 client_id = "admin"
 client_secret = "b2k13JjcgI0hJtUgHhL5r1Yn8yNo4pnr"
 
